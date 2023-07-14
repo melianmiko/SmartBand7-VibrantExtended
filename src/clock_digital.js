@@ -2,6 +2,7 @@ const osLang = DeviceRuntimeCore.HmUtils.getLanguage();
 const wdPosX = {
   "ru-RU": 120,
   "en-US": 104,
+  "es-ES": 104,
   "zh-CN": 111,
   "zh-TW": 111
 };
@@ -37,6 +38,7 @@ function _renderTimeDigital() {
 }
 
 function renderDate() {
+  const month_unit = osLang === "es-ES" ? 10 : 11;
   const fontDate = mkImgArray("digital/date");
   hmUI.createWidget(hmUI.widget.IMG_DATE, {
     month_startX: 30,
@@ -44,7 +46,7 @@ function renderDate() {
     month_en_array: fontDate,
     month_sc_array: fontDate,
     month_tc_array: fontDate,
-    month_unit_en: 'digital/date/11.png',
+    month_unit_en: `digital/date/${month_unit}.png`,
     month_unit_sc: 'digital/date/11.png',
     month_unit_tc: 'digital/date/11.png',
     month_zero: 1,
@@ -62,7 +64,7 @@ function renderDate() {
     x,
     y: 336,
     week_en: mkImgArray(`weekday/${osLang}`, 7),
-    week_sc: mkImgArray(`weekday/zh-CN`, 7),
-    week_tc: mkImgArray(`weekday/zh-TW`, 7)
+    week_sc: mkImgArray('weekday/zh-CN', 7),
+    week_tc: mkImgArray('weekday/zh-TW', 7)
   });
 }

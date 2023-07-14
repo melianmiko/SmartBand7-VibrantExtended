@@ -6,15 +6,6 @@ const EDIT_BARS = {
     font: "sm_yellow",
     color: 0xffe30b,
   },
-  km: {
-    value: 5,
-    dataType: hmUI.data_type.DISTANCE,
-    progressDataType: hmUI.data_type.STEP,
-    dotImage: "fonts/sm_lightblue/11.png",
-    url: "activityAppScreen",
-    font: "sm_lightblue",
-    color: 0x0dd3ff,
-  },
   consume: {
     value: 1,
     dataType: hmUI.data_type.CAL,
@@ -43,6 +34,15 @@ const EDIT_BARS = {
     url: "heart_app_Screen",
     font: "sm_red",
     color: 0xff0038,
+  },
+  km: {
+    value: 5,
+    dataType: hmUI.data_type.DISTANCE,
+    progressDataType: hmUI.data_type.STEP,
+    dotImage: "fonts/sm_lightblue/11.png",
+    url: "activityAppScreen",
+    font: "sm_lightblue",
+    color: 0x0dd3ff,
   },
   stress: {
     value: 6,
